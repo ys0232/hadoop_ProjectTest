@@ -1,0 +1,46 @@
+用maven构建hadoop环境
+1.用maven创建一个标准化的java项目
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DgroupId=org.yolin.mavenhadoop.mr
+-DartifactId=mavenHadoop -DpackageName=org.yolin.mavenhadoop.mr -Dversion=1.0-SNAPSHOT -DinteractiveMode=false
+
+cd ./mavenhadoop
+mvn clean install
+
+
+2.导入项目到idea
+
+3.增加hadoop依赖，修改pom.xml
+hadoop3.1.0依赖
+hadoop-common、hadoop-hdfs、hadoop-mapreduce-client-core
+hadoop-client
+
+写好pom文件依赖后，重启idea，提示是否导入maven依赖，点击导入。
+
+4.下载依赖
+
+5.从hadoop集群环境下载hadoop配置文件
+从/hadoop/etc/hadoop/目录下，将core-site.xml、hdfs-site.xml、mapred-site.xml
+三个文件移动到项目src/main/resources目录下
+修改文件配置
+
+6.配置本地host
+
+7.写一个mapreduce程序，例如wordcount.java
+
+8.启动hadoop(不可以用root)
+bash hadoop/sbin/start-all.sh
+网页打开http://localhost:50070测试是否成功启动hadoop
+
+9.使用hdfs命令上传文件
+hadoop fs -ls /  %%查看当前目录下文件
+hadoop fs -mkdir /input  %%在当前目录下创建一个名为input的文件夹
+hadoop fs -put ./core-site.xml /input %%将本地文件core-site.xml上传到/input文件夹中
+
+10.加入log4j，需要设置log4j.properties 
+在pom.xml中设置log4j的依赖信息
+在main()函数中，使用BasicConfigurator.configure();打印运行信息，
+
+11.需要打包成jar文件，使用命令hadoop jar xxx.jar 参数  才可以运行。
+打包jar包时，需要把META-INF文件也写入，具体的是，先加入META-INF，再加入module output
+
+

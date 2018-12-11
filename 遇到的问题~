@@ -1,0 +1,5 @@
+1.最后一个输出文件总是空的（moviesRecommand）
+2.总是找不到mapper、reducer类（mavenHadoop）
+打包jar包时，要把META-INF下MANIFEST.MF文件包含进去
+代码中用到的路径都用绝对路径
+3.

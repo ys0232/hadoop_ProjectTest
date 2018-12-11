@@ -1,0 +1,8 @@
+<root>
+    <item name='org.apache.hadoop.mapreduce.Mapper'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+    <item name='org.apache.hadoop.mapreduce.Reducer'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

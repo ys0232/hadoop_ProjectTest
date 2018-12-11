@@ -1,0 +1,5 @@
+<root>
+    <item name='org.apache.hadoop.mapred.OutputCollector'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

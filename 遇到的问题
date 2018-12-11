@@ -1,0 +1,6 @@
+1.最后一个输出文件总是空的（moviesRecommand）
+2.总是找不到mapper、reducer类（mavenHadoop）
+需要打包成jar文件，使用命令hadoop jar xxx.jar 参数  才可以运行。
+打包jar包时，需要把META-INF文件也写入，具体的是，先加入META-INF，再加入module output
+代码中用到的路径都用绝对路径
+3.

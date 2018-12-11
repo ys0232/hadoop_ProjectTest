@@ -1,0 +1,7 @@
+org/yolin/mavenhadoop/mr/wordCount$TokenizerMapper.class
+org/yolin/mavenhadoop/mr/wordCount$IntSumReducer.class
+org/yolin/mavenhadoop/mr/wordCountApp$MyReducer.class
+org/yolin/mavenhadoop/mr/App.class
+org/yolin/mavenhadoop/mr/wordCountApp$MyMapper.class
+org/yolin/mavenhadoop/mr/wordCountApp.class
+org/yolin/mavenhadoop/mr/wordCount.class
